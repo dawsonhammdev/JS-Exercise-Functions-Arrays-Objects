@@ -65,8 +65,14 @@ function makePersonObject(id, name, email){
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(name) {
+  const smartPerson = {
+    speak: function say(){
     return `Hello, my name is ${name}`
+    }
   }
+  return smartPerson;
+}
+
 
 
 /**
@@ -171,8 +177,9 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+  const lastCar = inventory[inventory.length - 1];
+  return `This is a ${lastCar.car_make} ${lastCar.car_model}.`
 }
 
 /**
